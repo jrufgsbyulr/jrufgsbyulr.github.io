@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西西人体 - 官方品牌影像社区 | 记录身体与生命的真实叙事</title>
+<meta name="description" content="西西人体官方网站是专注人体艺术、健康美学与身体叙事的原创视频品牌社区，以专业影像记录真实与温暖，为创作者与企业搭建高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c96b4a'/%3E%3Ccircle cx='32' cy='24' r='10' fill='%23f6ede2'/%3E%3Cpath d='M14 54c2-12 9-18 18-18s16 6 18 18z' fill='%23f6ede2'/%3E%3C/svg%3E">
+<style>
+:root{
+  --xxc-amber:#c96b4a;
+  --xxc-amber-deep:#a44f31;
+  --xxc-cream:#f8f2e9;
+  --xxc-cream-2:#f1e7da;
+  --xxc-ink:#33261f;
+  --xxc-ink-soft:#6a5648;
+  --xxc-line:#e3d4c2;
+  --xxc-gold:#d9a441;
+  --xxc-teal:#4f7c6a;
+  --xxc-shadow:0 14px 34px rgba(80,52,32,.12);
+  --xxc-radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:118px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--xxc-ink);
+  background:var(--xxc-cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.xxc-sticky-top{position:sticky;top:0;z-index:900}
+
+/* ---------- 公告条 ---------- */
+.xxc-notice-bar{
+  background:linear-gradient(90deg,var(--xxc-ink) 0%,#4a352a 60%,#6b4a35 100%);
+  color:var(--xxc-cream);
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.xxc-notice-inner{
+  max-width:1200px;margin:0 auto;padding:9px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.xxc-notice-tag{
+  flex:0 0 auto;background:var(--xxc-gold);color:#3a2a1c;
+  font-weight:700;border-radius:4px;padding:1px 8px;font-size:12px;
+}
+.xxc-notice-text{flex:1 1 320px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;opacity:.94}
+.xxc-notice-link{flex:0 0 auto;color:var(--xxc-gold);font-weight:600;font-size:12.5px;border-bottom:1px dashed rgba(217,164,65,.6);padding-bottom:1px}
+
+/* ---------- 页头 ---------- */
+.xxc-header{
+  background:rgba(248,242,233,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--xxc-line);
+}
+.xxc-header-inner{
+  max-width:1200px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.xxc-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.xxc-brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,var(--xxc-amber),var(--xxc-amber-deep));
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:19px;
+  box-shadow:0 6px 14px rgba(164,79,49,.3);
+}
+.xxc-brand-name{font-size:19px;font-weight:800;letter-spacing:.04em;line-height:1.2}
+.xxc-brand-sub{font-size:11px;color:var(--xxc-ink-soft);letter-spacing:.18em}
+.xxc-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap}
+.xxc-nav a{
+  font-size:14.5px;padding:8px 13px;border-radius:9px;color:var(--xxc-ink-soft);
+  font-weight:600;transition:.22s;
+}
+.xxc-nav a:hover{background:var(--xxc-cream-2);color:var(--xxc-amber-deep)}
+.xxc-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.xxc-search{
+  display:flex;align-items:center;gap:6px;background:#fff;
+  border:1px solid var(--xxc-line);border-radius:999px;padding:5px 6px 5px 14px;
+  transition:.25s;width:226px;
+}
+.xxc-search:focus-within{border-color:var(--xxc-amber);box-shadow:0 0 0 3px rgba(201,107,74,.14)}
+.xxc-search input{border:none;outline:none;background:none;font-size:13.5px;width:100%;color:var(--xxc-ink)}
+.xxc-search button{
+  background:var(--xxc-amber);color:#fff;border-radius:999px;
+  font-size:12.5px;font-weight:700;padding:6px 13px;flex:0 0 auto;
+}
+.xxc-burger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--xxc-line);background:#fff;font-size:18px}
+.xxc-search-feedback{
+  max-width:1200px;margin:0 auto;padding:0 20px 10px;
+  font-size:13px;color:var(--xxc-amber-deep);display:none;
+}
+.xxc-search-feedback.xxc-show{display:block}
+
+/* ---------- 通用容器 ---------- */
+.xxc-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.xxc-section{padding:64px 0}
+.xxc-section-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.xxc-kicker{
+  font-size:12px;font-weight:800;letter-spacing:.22em;color:var(--xxc-amber-deep);
+  text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;
+}
+.xxc-kicker::before{content:"";width:22px;height:2px;background:var(--xxc-amber);border-radius:2px}
+.xxc-h2{font-size:29px;line-height:1.3;font-weight:800;letter-spacing:.01em}
+.xxc-h2 small{display:block;font-size:14px;font-weight:500;color:var(--xxc-ink-soft);letter-spacing:.02em;margin-top:6px}
+
+/* ---------- 按钮 ---------- */
+.xxc-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;
+  font-size:14.5px;font-weight:700;transition:.22s;border:1.5px solid transparent;
+}
+.xxc-btn-primary{background:var(--xxc-amber);color:#fff;box-shadow:0 8px 20px rgba(201,107,74,.3)}
+.xxc-btn-primary:hover{background:var(--xxc-amber-deep);transform:translateY(-2px)}
+.xxc-btn-ghost{border-color:var(--xxc-line);color:var(--xxc-ink);background:#fff}
+.xxc-btn-ghost:hover{border-color:var(--xxc-amber);color:var(--xxc-amber-deep)}
+.xxc-btn-sm{padding:7px 15px;font-size:12.5px}
+
+/* ---------- 首屏 ---------- */
+.xxc-hero{
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(217,164,65,.22),transparent 62%),
+    radial-gradient(700px 380px at 4% 100%,rgba(79,124,106,.16),transparent 60%),
+    linear-gradient(160deg,#fbf6ee,#f2e6d6);
+  border-bottom:1px solid var(--xxc-line);
+}
+.xxc-hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;
+  padding:56px 0 62px;
+}
+.xxc-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--xxc-line);
+  border-radius:999px;padding:6px 15px 6px 8px;font-size:12.5px;font-weight:700;color:var(--xxc-amber-deep);
+  margin-bottom:18px;
+}
+.xxc-hero-badge i{width:20px;height:20px;border-radius:50%;background:var(--xxc-teal);display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px}
+h1.xxc-hero-title{
+  font-size:clamp(34px,5vw,56px);line-height:1.1;font-weight:900;letter-spacing:.01em;
+  margin-bottom:16px;
+}
+h1.xxc-hero-title span{
+  background:linear-gradient(120deg,var(--xxc-amber),var(--xxc-gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.xxc-hero-lead{font-size:16px;color:var(--xxc-ink-soft);max-width:520px;margin-bottom:22px}
+.xxc-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.xxc-hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+.xxc-stat-num{font-size:27px;font-weight:900;color:var(--xxc-amber-deep);line-height:1.1;font-variant-numeric:tabular-nums}
+.xxc-stat-label{font-size:12.5px;color:var(--xxc-ink-soft);letter-spacing:.04em}
+.xxc-hero-visual{position:relative}
+.xxc-hero-cover{
+  border-radius:24px;overflow:hidden;box-shadow:var(--xxc-shadow);
+  border:6px solid #fff;background:#fff;aspect-ratio:16/11;position:relative;
+}
+.xxc-hero-cover img{width:100%;height:100%;object-fit:cover}
+.xxc-hero-float{
+  position:absolute;left:-16px;bottom:26px;background:#fff;border-radius:14px;
+  padding:11px 15px;box-shadow:var(--xxc-shadow);display:flex;align-items:center;gap:10px;
+  font-size:12.5px;font-weight:700;
+}
+.xxc-hero-float i{
+  width:30px;height:30px;border-radius:9px;background:var(--xxc-cream-2);
+  display:grid;place-items:center;font-style:normal;color:var(--xxc-amber-deep);font-size:14px;
+}
+
+/* ---------- 关键词解析 ---------- */
+.xxc-insight{background:#fff;border-top:1px solid var(--xxc-line);border-bottom:1px solid var(--xxc-line)}
+.xxc-insight-grid{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
+.xxc-insight-side{position:sticky;top:150px}
+.xxc-insight-side .xxc-h2{font-size:26px}
+.xxc-insight-side p{font-size:13.5px;color:var(--xxc-ink-soft);margin-top:12px}
+.xxc-insight-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.xxc-insight-tags span{
+  font-size:12px;padding:4px 11px;border-radius:999px;background:var(--xxc-cream-2);
+  color:var(--xxc-amber-deep);font-weight:600;
+}
+.xxc-prose p{font-size:15px;color:#4a3a30;margin-bottom:16px;text-align:justify}
+.xxc-prose h3{font-size:17.5px;margin:24px 0 10px;color:var(--xxc-ink)}
+.xxc-prose strong{color:var(--xxc-amber-deep)}
+.xxc-prose blockquote{
+  border-left:3px solid var(--xxc-amber);background:var(--xxc-cream);
+  padding:14px 18px;border-radius:0 10px 10px 0;font-size:14px;color:var(--xxc-ink-soft);margin:18px 0;
+}
+
+/* ---------- 焦点内容 ---------- */
+.xxc-focus{background:var(--xxc-cream)}
+.xxc-focus-top{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;margin-bottom:22px}
+.xxc-focus-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.xxc-media-card{
+  background:#fff;border-radius:var(--xxc-radius);overflow:hidden;border:1px solid var(--xxc-line);
+  transition:.26s;display:flex;flex-direction:column;
+}
+.xxc-media-card:hover{transform:translateY(-5px);box-shadow:var(--xxc-shadow)}
+.xxc-media-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--xxc-cream-2)}
+.xxc-media-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.xxc-media-card:hover .xxc-media-thumb img{transform:scale(1.05)}
+.xxc-play{
+  position:absolute;inset:0;margin:auto;width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.9);display:grid;place-items:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.22);transition:.25s;
+}
+.xxc-play::after{content:"";border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent var(--xxc-amber-deep);margin-left:3px}
+.xxc-media-card:hover .xxc-play{background:var(--xxc-amber)}
+.xxc-media-card:hover .xxc-play::after{border-left-color:#fff}
+.xxc-thumb-tag{
+  position:absolute;left:12px;top:12px;background:rgba(51,38,31,.8);color:#fff;
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.xxc-thumb-mask{position:absolute;inset:auto 0 0 0;height:44%;background:linear-gradient(transparent,rgba(40,26,18,.55))}
+.xxc-media-body{padding:15px 17px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.xxc-media-title{font-size:15.5px;font-weight:800;line-height:1.45}
+.xxc-media-desc{font-size:13px;color:var(--xxc-ink-soft);line-height:1.6;flex:1}
+.xxc-media-meta{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--xxc-ink-soft);flex-wrap:wrap}
+.xxc-avatar{width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:800}
+.xxc-media-actions{display:flex;gap:8px;align-items:center;margin-top:2px}
+.xxc-act{
+  font-size:12px;color:var(--xxc-ink-soft);display:inline-flex;align-items:center;gap:5px;
+  padding:4px 9px;border-radius:999px;border:1px solid var(--xxc-line);transition:.2s;background:#fff;
+}
+.xxc-act:hover{border-color:var(--xxc-amber);color:var(--xxc-amber-deep)}
+.xxc-act.xxc-liked{background:var(--xxc-amber);border-color:var(--xxc-amber);color:#fff}
+.xxc-act.xxc-saved{background:var(--xxc-teal);border-color:var(--xxc-teal);color:#fff}
+.xxc-focus-big .xxc-media-thumb{aspect-ratio:16/9}
+.xxc-focus-big .xxc-media-title{font-size:20px}
+
+/* ---------- 专题 ---------- */
+.xxc-topics{background:#fff}
+.xxc-topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.xxc-topic{
+  border-radius:var(--xxc-radius);overflow:hidden;position:relative;border:1px solid var(--xxc-line);
+  background:#fff;transition:.26s;display:flex;flex-direction:column;
+}
+.xxc-topic:hover{transform:translateY(-5px);box-shadow:var(--xxc-shadow)}
+.xxc-topic-cover{aspect-ratio:4/3;overflow:hidden;position:relative}
+.xxc-topic-cover img{width:100%;height:100%;object-fit:cover}
+.xxc-topic-status{
+  position:absolute;right:12px;top:12px;font-size:11.5px;font-weight:700;padding:3px 10px;
+  border-radius:999px;background:var(--xxc-gold);color:#3a2a1c;
+}
+.xxc-topic-body{padding:16px 18px 19px}
+.xxc-topic-body h3{font-size:16.5px;margin-bottom:8px}
+.xxc-topic-body p{font-size:13px;color:var(--xxc-ink-soft);line-height:1.65}
+
+/* ---------- 创作者 ---------- */
+.xxc-creators{background:linear-gradient(175deg,#f4ebdf,#f8f2e9)}
+.xxc-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.xxc-creator-card{
+  background:#fff;border-radius:var(--xxc-radius);border:1px solid var(--xxc-line);
+  padding:24px 20px;text-align:center;transition:.26s;display:flex;flex-direction:column;align-items:center;gap:9px;
+}
+.xxc-creator-card:hover{transform:translateY(-5px);box-shadow:var(--xxc-shadow)}
+.xxc-creator-face{
+  width:66px;height:66px;border-radius:50%;display:grid;place-items:center;
+  font-size:24px;font-weight:900;color:#fff;letter-spacing:.04em;
+}
+.xxc-creator-name{font-size:16px;font-weight:800}
+.xxc-creator-field{font-size:12px;color:var(--xxc-amber-deep);font-weight:700;background:var(--xxc-cream-2);padding:3px 11px;border-radius:999px}
+.xxc-creator-bio{font-size:12.5px;color:var(--xxc-ink-soft);line-height:1.6}
+.xxc-creator-nums{display:flex;gap:16px;font-size:12px;color:var(--xxc-ink-soft);margin-top:2px}
+.xxc-creator-nums b{display:block;color:var(--xxc-ink);font-size:14.5px}
+
+/* ---------- 评价 ---------- */
+.xxc-voices{background:#fff}
+.xxc-voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.xxc-voice{
+  background:var(--xxc-cream);border-radius:var(--xxc-radius);padding:20px;
+  border:1px solid var(--xxc-line);display:flex;flex-direction:column;gap:12px;
+}
+.xxc-voice-top{display:flex;align-items:center;gap:10px}
+.xxc-voice-name{font-size:14px;font-weight:800}
+.xxc-voice-role{font-size:11.5px;color:var(--xxc-ink-soft)}
+.xxc-voice-text{font-size:13.5px;color:#4a3a30;line-height:1.7}
+.xxc-voice-dots{color:var(--xxc-gold);font-size:12px;letter-spacing:2px}
+
+/* ---------- 灵感 ---------- */
+.xxc-ideas{background:var(--xxc-cream)}
+.xxc-ideas-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.xxc-idea-panel{
+  background:#fff;border-radius:var(--xxc-radius);border:1px solid var(--xxc-line);padding:26px;
+}
+.xxc-idea-panel h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.xxc-idea-panel h3 i{
+  width:26px;height:26px;border-radius:8px;background:var(--xxc-cream-2);
+  display:grid;place-items:center;font-style:normal;color:var(--xxc-amber-deep);font-size:13px;
+}
+.xxc-idea-list li{
+  font-size:13.5px;color:#4a3a30;padding:9px 0;border-bottom:1px dashed var(--xxc-line);
+  display:flex;gap:10px;
+}
+.xxc-idea-list li:last-child{border-bottom:none}
+.xxc-idea-list li b{color:var(--xxc-amber-deep);flex:0 0 auto}
+.xxc-tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.xxc-tag-cloud button{
+  font-size:12.5px;padding:6px 13px;border-radius:999px;border:1px solid var(--xxc-line);
+  background:#fff;color:var(--xxc-ink-soft);transition:.2s;font-weight:600;
+}
+.xxc-tag-cloud button:hover{border-color:var(--xxc-amber);color:var(--xxc-amber-deep);background:var(--xxc-cream)}
+
+/* ---------- 动态 ---------- */
+.xxc-news{background:#fff}
+.xxc-news-list{display:flex;flex-direction:column;gap:0}
+.xxc-news-item{
+  display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:center;
+  padding:18px 4px;border-bottom:1px solid var(--xxc-line);
+}
+.xxc-news-date{
+  font-size:12.5px;font-weight:800;color:var(--xxc-amber-deep);background:var(--xxc-cream);
+  border-radius:9px;padding:8px 0;text-align:center;letter-spacing:.02em;
+}
+.xxc-news-item h3{font-size:15.5px}
+.xxc-news-item p{font-size:13px;color:var(--xxc-ink-soft)}
+.xxc-news-badge{
+  font-size:11.5px;font-weight:700;padding:3px 11px;border-radius:999px;
+  background:var(--xxc-cream-2);color:var(--xxc-amber-deep);
+}
+
+/* ---------- FAQ ---------- */
+.xxc-faq{background:var(--xxc-cream)}
+.xxc-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.xxc-faq details{
+  background:#fff;border:1px solid var(--xxc-line);border-radius:12px;padding:15px 18px;
+  transition:.2s;
+}
+.xxc-faq details[open]{border-color:var(--xxc-amber);box-shadow:0 8px 22px rgba(160,110,70,.1)}
+.xxc-faq summary{
+  font-size:14.5px;font-weight:700;cursor:pointer;list-style:none;display:flex;
+  justify-content:space-between;align-items:center;gap:12px;
+}
+.xxc-faq summary::-webkit-details-marker{display:none}
+.xxc-faq summary::after{content:"+";font-size:18px;color:var(--xxc-amber);font-weight:700;line-height:1}
+.xxc-faq details[open] summary::after{content:"–"}
+.xxc-faq details p{font-size:13px;color:var(--xxc-ink-soft);margin-top:10px;line-height:1.7}
+
+/* ---------- 联系 ---------- */
+.xxc-contact{
+  background:linear-gradient(120deg,#3a2a1f,#5a3c29 55%,#7a4f33);color:var(--xxc-cream);
+  padding:60px 0;
+}
+.xxc-contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.xxc-contact h2{font-size:27px;margin-bottom:12px;color:#fff}
+.xxc-contact p{font-size:14px;opacity:.84;margin-bottom:18px}
+.xxc-contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+.xxc-contact-card{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  border-radius:var(--xxc-radius);padding:22px;font-size:13.5px;line-height:2;
+}
+.xxc-contact-card b{color:var(--xxc-gold)}
+
+/* ---------- 页脚 ---------- */
+.xxc-footer{background:#2a1e17;color:#c9b6a5;padding:46px 0 26px;font-size:13px}
+.xxc-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:28px}
+.xxc-footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.04em}
+.xxc-footer ul li{margin-bottom:7px}
+.xxc-footer a:hover{color:var(--xxc-gold)}
+.xxc-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.xxc-footer-brand .xxc-brand-mark{width:38px;height:38px;font-size:17px;box-shadow:none}
+.xxc-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;opacity:.8;
+}
+
+/* ---------- 弹窗 & Toast ---------- */
+.xxc-modal-mask{
+  position:fixed;inset:0;background:rgba(35,22,14,.55);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;padding:20px;z-index:1200;
+}
+.xxc-modal-mask.xxc-open{display:flex}
+.xxc-modal{
+  background:var(--xxc-cream);border-radius:18px;max-width:460px;width:100%;
+  padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.35);position:relative;
+}
+.xxc-modal h3{font-size:19px;margin-bottom:8px}
+.xxc-modal p{font-size:13.5px;color:var(--xxc-ink-soft);margin-bottom:16px}
+.xxc-modal-close{
+  position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:50%;
+  background:#fff;border:1px solid var(--xxc-line);font-size:16px;line-height:1;color:var(--xxc-ink-soft);
+}
+.xxc-modal textarea,.xxc-modal input{
+  width:100%;border:1px solid var(--xxc-line);border-radius:10px;padding:10px 13px;
+  font-family:inherit;font-size:13.5px;background:#fff;outline:none;margin-bottom:12px;color:var(--xxc-ink);
+}
+.xxc-modal textarea:focus,.xxc-modal input:focus{border-color:var(--xxc-amber);box-shadow:0 0 0 3px rgba(201,107,74,.13)}
+.xxc-share-row{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}
+.xxc-share-row button{
+  flex:1 1 90px;background:#fff;border:1px solid var(--xxc-line);border-radius:10px;
+  padding:11px 6px;font-size:13px;font-weight:700;color:var(--xxc-ink-soft);transition:.2s;
+}
+.xxc-share-row button:hover{border-color:var(--xxc-amber);color:var(--xxc-amber-deep)}
+.xxc-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+  background:var(--xxc-ink);color:#fff;font-size:13.5px;font-weight:600;
+  padding:11px 22px;border-radius:999px;box-shadow:0 14px 34px rgba(0,0,0,.3);
+  opacity:0;pointer-events:none;transition:.3s;z-index:1500;
+}
+.xxc-toast.xxc-show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- 回到顶部 ---------- */
+.xxc-top-btn{
+  position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;
+  background:var(--xxc-amber);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 10px 24px rgba(201,107,74,.4);opacity:0;pointer-events:none;transition:.3s;z-index:800;
+}
+.xxc-top-btn.xxc-show{opacity:1;pointer-events:auto}
+.xxc-top-btn:hover{background:var(--xxc-amber-deep)}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:1024px){
+  .xxc-hero-grid{grid-template-columns:1fr;gap:30px}
+  .xxc-insight-grid{grid-template-columns:1fr;gap:22px}
+  .xxc-insight-side{position:static}
+  .xxc-focus-top{grid-template-columns:1fr}
+  .xxc-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .xxc-topics-grid,.xxc-voice-grid{grid-template-columns:repeat(2,1fr)}
+  .xxc-ideas-grid,.xxc-contact-grid{grid-template-columns:1fr}
+  .xxc-footer-grid{grid-template-columns:1fr 1fr}
+  .xxc-focus-mini-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .xxc-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--xxc-line);
+    flex-direction:column;padding:10px 16px;gap:2px;box-shadow:0 18px 30px rgba(60,40,25,.12);
+  }
+  .xxc-nav.xxc-open{display:flex}
+  .xxc-nav a{padding:11px 12px}
+  .xxc-header-inner{position:relative;gap:12px}
+  .xxc-burger{display:grid;place-items:center}
+  .xxc-search{width:150px}
+  .xxc-focus-mini-grid,.xxc-topics-grid,.xxc-voice-grid,.xxc-creator-grid,.xxc-faq-grid{grid-template-columns:1fr}
+  .xxc-news-item{grid-template-columns:76px 1fr;gap:12px}
+  .xxc-news-badge{grid-column:2;justify-self:start}
+  .xxc-section{padding:44px 0}
+  .xxc-h2{font-size:23px}
+  .xxc-hero-grid{padding:36px 0 44px}
+  .xxc-notice-inner{padding:8px 14px;gap:8px}
+  .xxc-notice-text{white-space:normal;flex:1 1 100%;order:3;font-size:12px}
+  .xxc-footer-grid{grid-template-columns:1fr}
+  html{scroll-padding-top:150px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 公告条 + 页头 吸顶 -->
+<div class="xxc-sticky-top">
+  <div class="xxc-notice-bar">
+    <div class="xxc-notice-inner">
+      <span class="xxc-notice-tag">官方发布</span>
+      <span class="xxc-notice-text">西西人体影像季「身体的叙事」第二期已上线 12 组新作；创作挑战赛报名通道同步开启</span>
+      <a class="xxc-notice-link" href="#xxc-topics">查看详情 →</a>
+    </div>
+  </div>
+  <header class="xxc-header">
+    <div class="xxc-header-inner">
+      <a class="xxc-brand" href="#xxc-home">
+        <span class="xxc-brand-mark">西</span>
+        <span>
+          <span class="xxc-brand-name">西西人体</span><br>
+          <span class="xxc-brand-sub">OFFICIAL</span>
+        </span>
+      </a>
+      <nav class="xxc-nav" id="xxcNav">
+        <a href="#xxc-home">首页</a>
+        <a href="#xxc-insight">品牌解析</a>
+        <a href="#xxc-focus">焦点影像</a>
+        <a href="#xxc-topics">专题企划</a>
+        <a href="#xxc-creators">创作者</a>
+        <a href="#xxc-voices">口碑</a>
+        <a href="#xxc-news">企业动态</a>
+        <a href="#xxc-faq">帮助</a>
+        <a href="#xxc-contact">联系</a>
+      </nav>
+      <div class="xxc-header-tools">
+        <div class="xxc-search">
+          <input type="text" id="xxcSearchInput" placeholder="搜索影像 / 创作者" aria-label="站内搜索">
+          <button type="button" id="xxcSearchBtn">搜索</button>
+        </div>
+        <button class="xxc-burger" id="xxcBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <div class="xxc-search-feedback" id="xxcSearchFeedback"></div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="xxc-hero" id="xxc-home">
+  <div class="xxc-wrap xxc-hero-grid">
+    <div>
+      <span class="xxc-hero-badge"><i>✓</i>官方网站 · 企业级原创影像品牌</span>
+      <h1 class="xxc-hero-title">西西人体<span>·</span>记录身体的真实与温度</h1>
+      <p class="xxc-hero-lead">作为深耕人体美学与身体叙事的视频品牌，西西人体官方网站以专业影像与原创内容为核心，连接创作者、企业伙伴与每一位关注健康、审美与生命故事的观众。</p>
+      <div class="xxc-hero-actions">
+        <a class="xxc-btn xxc-btn-primary" href="#xxc-focus">浏览焦点影像</a>
+        <a class="xxc-btn xxc-btn-ghost" href="#xxc-creators">认识创作者</a>
+        <a class="xxc-btn xxc-btn-ghost" href="#xxc-contact" id="xxcHeroSubmit">我要投稿</a>
+      </div>
+      <div class="xxc-hero-stats">
+        <div>
+          <div class="xxc-stat-num" data-count="1260">1260+</div>
+          <div class="xxc-stat-label">原创影像作品</div>
+        </div>
+        <div>
+          <div class="xxc-stat-num" data-count="86">86</div>
+          <div class="xxc-stat-label">签约创作者</div>
+        </div>
+        <div>
+          <div class="xxc-stat-num" data-count="214">214万</div>
+          <div class="xxc-stat-label">社区用户陪伴</div>
+        </div>
+      </div>
+    </div>
+    <div class="xxc-hero-visual">
+      <div class="xxc-hero-cover">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='bgA' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3e2cd'/%3E%3Cstop offset='1' stop-color='%23e0b48a'/%3E%3C/linearGradient%3E%3ClinearGradient id='bodyA' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c96b4a'/%3E%3Cstop offset='1' stop-color='%238f4527'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23bgA)'/%3E%3Ccircle cx='500' cy='90' r='120' fill='%23ffffff' opacity='.3'/%3E%3Cpath d='M0 400 Q150 300 320 340 T640 300 L640 400 Z' fill='%23d9a441' opacity='.4'/%3E%3Cg opacity='.92'%3E%3Cellipse cx='320' cy='170' rx='46' ry='52' fill='url(%23bodyA)'/%3E%3Cpath d='M320 220 C260 240 240 310 240 360 L400 360 C400 310 380 240 320 220 Z' fill='url(%23bodyA)'/%3E%3Cpath d='M274 190 Q240 240 236 300' stroke='%23a44f31' stroke-width='10' stroke-linecap='round' fill='none'/%3E%3Cpath d='M366 190 Q400 240 404 300' stroke='%23a44f31' stroke-width='10' stroke-linecap='round' fill='none'/%3E%3C/g%3E%3Cpath d='M120 400 Q160 320 220 330' stroke='%234f7c6a' stroke-width='7' fill='none' opacity='.6'/%3E%3Ccircle cx='140' cy='80' r='26' fill='%23ffffff' opacity='.55'/%3E%3C/svg%3E" alt="西西人体品牌主视觉：暖色光影中的人体轮廓与自然线条">
+      </div>
+      <div class="xxc-hero-float"><i>◈</i>本期主推 · 身体的叙事 第二期</div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌解析 -->
+<section class="xxc-insight xxc-section" id="xxc-insight">
+  <div class="xxc-wrap xxc-insight-grid">
+    <aside class="xxc-insight-side">
+      <span class="xxc-kicker">品牌解析</span>
+      <h2 class="xxc-h2">关于「西西人体」，一次完整的品牌说明</h2>
+      <p>从命名由来、内容方向到社区准则，这里是官方网站给新观众的第一份品牌手册。</p>
+      <div class="xxc-insight-tags">
+        <span>人体美学</span><span>健康叙事</span><span>原创影像</span>
+        <span>内容生态</span><span>品牌故事</span><span>创作者社区</span>
+      </div>
+    </aside>
+    <div class="xxc-prose">
+      <p><strong>「西西人体」是一个以人体为核心表达对象的原创视频品牌。</strong>这里的“人体”并不是单一的视觉符号，它既包含解剖学意义上的结构与比例，也包含身体在时间中留下的痕迹——成长、劳作、运动、休养、衰老。西西人体官方网站希望用镜头把这些日常却常被忽略的部分重新带回到公共讨论里，让身体被看见、被理解，也被温柔以待。</p>
+      <h3>一、品牌定位：身体叙事的内容生态</h3>
+      <p>作为一家持续运营的视频品牌企业，西西人体把内容重心放在“身体叙事”上。我们围绕人体艺术摄影、健康运动、形体美学、身体心理、康复照护、生命故事等方向，建立一个多元而包容的内容生态。平台上的每一支作品都经过选题、拍摄、审片与版权核验流程，力求做到原创、正版、专业、高清，让观众在观看时获得品质感，也让创作者获得应有的尊重与回报。</p>
+      <p>与文旅、运动、医疗健康、服装、家居等行业的企业伙伴合作时，西西人体提供从品牌片、纪录短片到系列栏目的一站式影像方案。我们相信，真正有影响力的品牌内容，不靠夸张的感官刺激，而靠真实的人物与可信的细节。这也是西西人体在垂直领域持续深耕、逐渐积累口碑的原因。</p>
+      <h3>二、内容方向：从身体出发的五条主线</h3>
+      <p>第一条主线是<strong>人体艺术与影像美学</strong>。我们与摄影师、灯光师、美术指导合作，探索线条、光影、肌理之间的关系，用克制的镜头语言表达身体之美。第二条主线是<strong>健康与运动</strong>，包括体态纠正、力量训练、瑜伽、康复拉伸等实用教程，强调科学、循序渐进与自我保护。第三条主线是<strong>身体心理</strong>，讨论身体形象焦虑、自我接纳、亲密关系边界等议题，用访谈与真实故事提供陪伴感。</p>
+      <p>第四条主线是<strong>生命故事</strong>，记录孕产、照护、术后康复、老年生活等阶段的身体变化，让这些常被回避的经验获得表达空间。第五条主线是<strong>创作者幕后</strong>，展示一支作品从脚本到成片的完整过程，帮助新人理解专业影像的工作方法，也为企业伙伴提供可参考的内容范本。</p>
+      <h3>三、社区准则：用户至上，边界清晰</h3>
+      <p>西西人体官方网站坚持用户至上与内容合规并重。平台设有明确的社区准则：所有涉及人体的内容须为艺术表达、健康科普或生命记录，禁止任何形式的低俗化与侵权；创作者上传作品需完成实名与版权声明；观众可通过举报入口反馈问题，运营团队在 48 小时内响应处理。我们相信，清晰的边界是社区长期健康运营的前提，也是对创作者与观众的双重保护。</p>
+      <blockquote>“身体不是被观看的对象，而是每个人与自己相处的方式。”——这是西西人体品牌故事里最常被引用的一句话，也是我们做每一支作品前的自问。</blockquote>
+      <h3>四、企业能力：从内容到服务的完整链路</h3>
+      <p>经过多年积累，西西人体已经形成策划、拍摄、后期、发行、社区运营的完整链路。企业伙伴可以按项目制合作品牌片与系列栏目，也可以接入平台的创作者资源池，发起共创企划、比赛与挑战。我们提供脚本灵感、标题建议、剪辑思路等创作辅助，也提供数据榜单与内容诊断，帮助合作方更清楚地理解内容表现。对个人创作者，平台开放投稿入口、创作指南与新人扶持计划，鼓励更多真实、温暖、有力量的表达。</p>
+      <p>面向未来，西西人体将继续在人体美学与健康叙事这一垂直领域深耕，保持创新与匠心，把官方网站建设成值得信赖的品牌门户：一端连接专业创作者与企业，一端连接每一位愿意认真对待身体的普通用户。我们相信，持续运营的耐心与对品质的坚持，最终会沉淀为口碑，也会让这个社区拥有更长久的生命力。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 焦点影像 -->
+<section class="xxc-focus xxc-section" id="xxc-focus">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">焦点影像</span>
+        <h2 class="xxc-h2">本周焦点 · 编辑部精选<small>专业团队审片，原创正版，高清呈现</small></h2>
+      </div>
+    </div>
+    <div class="xxc-focus-top">
+      <article class="xxc-media-card xxc-focus-big">
+        <div class="xxc-media-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f4a42'/%3E%3Cstop offset='1' stop-color='%236d9b83'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f1)'/%3E%3Ccircle cx='160' cy='120' r='90' fill='%23e8d7b8' opacity='.28'/%3E%3Cpath d='M380 360 C360 250 400 180 470 150 C520 130 560 170 545 230 C530 300 480 360 380 360 Z' fill='%23f3e6cd' opacity='.8'/%3E%3Cpath d='M60 300 Q150 240 240 280' stroke='%23d9a441' stroke-width='6' fill='none'/%3E%3Crect y='250' width='640' height='110' fill='%230f1f1a' opacity='.35'/%3E%3C/svg%3E" alt="焦点影像《肩颈线的三十天》封面：晨光中的肩背线条与绿色背景">
+          <span class="xxc-thumb-tag">本周主推</span>
+          <span class="xxc-play" aria-hidden="true"></span>
+          <span class="xxc-thumb-mask"></span>
+        </div>
+        <div class="xxc-media-body">
+          <h3 class="xxc-media-title">肩颈线的三十天：一位舞者的体态记录</h3>
+          <p class="xxc-media-desc">跟拍现代舞者阿栖的三十天训练周期，从站姿、呼吸到肩胛控制，完整记录身体如何在重复中慢慢变好。片中配有康复师讲解，适合长期伏案人群参考。</p>
+          <div class="xxc-media-meta">
+            <span class="xxc-avatar" style="background:#4f7c6a">栖</span>
+            <span>阿栖的形体笔记</span><span>·</span><span>1.2 万次播放</span><span>·</span><span>18 分钟</span>
+          </div>
+          <div class="xxc-media-actions">
+            <button class="xxc-act" data-like="1284">♥ 喜欢 <b>1284</b></button>
+            <button class="xxc-act" data-save>☆ 收藏</button>
+            <button class="xxc-act" data-share>↗ 分享</button>
+          </div>
+        </div>
+      </article>
+      <div class="xxc-focus-mini-grid">
+        <article class="xxc-media-card">
+          <div class="xxc-media-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f0dcc4'/%3E%3Ccircle cx='310' cy='60' r='55' fill='%23c96b4a' opacity='.55'/%3E%3Cpath d='M0 225 Q90 150 180 178 T400 160 L400 225 Z' fill='%23a44f31' opacity='.5'/%3E%3Cpath d='M120 225 Q140 150 200 150 Q260 150 280 225' stroke='%2333261f' stroke-width='3' fill='none' opacity='.4'/%3E%3C/svg%3E" alt="作品《手部特写：陶艺与掌纹》封面，暖色陶土与手掌轮廓">
+            <span class="xxc-thumb-tag">手作</span>
+            <span class="xxc-play" aria-hidden="true"></span>
+            <span class="xxc-thumb-mask"></span>
+          </div>
+          <div class="xxc-media-body">
+            <h3 class="xxc-media-title">掌纹与陶土：手部特写的柔光拍法</h3>
+            <p class="xxc-media-desc">用一支短片讲清手部特写的布光、机位与后期思路。</p>
+            <div class="xxc-media-meta"><span class="xxc-avatar" style="background:#c96b4a">陶</span><span>陶土工坊</span><span>·</span><span>6800 次播放</span></div>
+            <div class="xxc-media-actions">
+              <button class="xxc-act" data-like="642">♥ 喜欢 <b>642</b></button>
+              <button class="xxc-act" data-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+        <article class="xxc-media-card">
+          <div class="xxc-media-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23dfe7ea'/%3E%3Ccircle cx='90' cy='70' r='46' fill='%234f7c6a' opacity='.6'/%3E%3Crect x='210' y='40' width='130' height='150' rx='18' fill='%23f8f2e9'/%3E%3Cpath d='M240 150 L240 95 L280 130 L310 80' stroke='%23a44f31' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="作品《呼吸与心率》封面，冷调蓝灰背景上的心率曲线">
+            <span class="xxc-thumb-tag">健康</span>
+            <span class="xxc-play" aria-hidden="true"></span>
+            <span class="xxc-thumb-mask"></span>
+          </div>
+          <div class="xxc-media-body">
+            <h3 class="xxc-media-title">呼吸与心率：运动后恢复的十分钟</h3>
+            <p class="xxc-media-desc">一套可在办公室完成的呼吸与拉伸组合，跟随镜头即可练习。</p>
+            <div class="xxc-media-meta"><span class="xxc-avatar" style="background:#4f7c6a">舒</span><span>舒展计划</span><span>·</span><span>9200 次播放</span></div>
+            <div class="xxc-media-actions">
+              <button class="xxc-act" data-like="893">♥ 喜欢 <b>893</b></button>
+              <button class="xxc-act" data-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+        <article class="xxc-media-card">
+          <div class="xxc-media-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e9d9e4'/%3E%3Ccircle cx='200' cy='110' r='62' fill='%238f6a8a' opacity='.5'/%3E%3Cpath d='M120 200 Q200 140 280 200' stroke='%2333261f' stroke-width='3' fill='none' opacity='.35'/%3E%3Ccircle cx='320' cy='50' r='26' fill='%23d9a441' opacity='.7'/%3E%3C/svg%3E" alt="作品《关于身体形象的一次长谈》封面，柔和粉紫背景与对话气泡">
+            <span class="xxc-thumb-tag">访谈</span>
+            <span class="xxc-play" aria-hidden="true"></span>
+            <span class="xxc-thumb-mask"></span>
+          </div>
+          <div class="xxc-media-body">
+            <h3 class="xxc-media-title">关于身体形象的一次长谈</h3>
+            <p class="xxc-media-desc">心理咨询师与三位普通观众，聊了聊镜子里的自己。</p>
+            <div class="xxc-media-meta"><span class="xxc-avatar" style="background:#8f6a8a">言</span><span>言心室</span><span>·</span><span>1.5 万次播放</span></div>
+            <div class="xxc-media-actions">
+              <button class="xxc-act" data-like="1502">♥ 喜欢 <b>1502</b></button>
+              <button class="xxc-act" data-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+        <article class="xxc-media-card">
+          <div class="xxc-media-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23cbd9c4'/%3E%3Cpath d='M0 190 Q100 120 200 160 T400 130 L400 225 L0 225 Z' fill='%234f7c6a' opacity='.55'/%3E%3Ccircle cx='320' cy='60' r='34' fill='%23f3e6cd' opacity='.9'/%3E%3Cpath d='M60 70 L100 110 M100 70 L60 110' stroke='%23a44f31' stroke-width='4' opacity='.5'/%3E%3C/svg%3E" alt="作品《孕中期的一天》封面，自然绿背景与温柔光影">
+            <span class="xxc-thumb-tag">生命故事</span>
+            <span class="xxc-play" aria-hidden="true"></span>
+            <span class="xxc-thumb-mask"></span>
+          </div>
+          <div class="xxc-media-body">
+            <h3 class="xxc-media-title">孕中期的一天：身体变化的温柔记录</h3>
+            <p class="xxc-media-desc">从早晨的体重记录到夜里的胎动，一支无旁白的日常影像。</p>
+            <div class="xxc-media-meta"><span class="xxc-avatar" style="background:#4f7c6a">禾</span><span>小禾日记</span><span>·</span><span>7600 次播放</span></div>
+            <div class="xxc-media-actions">
+              <button class="xxc-act" data-like="711">♥ 喜欢 <b>711</b></button>
+              <button class="xxc-act" data-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 专题企划 -->
+<section class="xxc-topics xxc-section" id="xxc-topics">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">专题企划</span>
+        <h2 class="xxc-h2">长期专题 · 持续更新的品牌企划<small>每季一个主题，串联创作者、企业与社区的共同表达</small></h2>
+      </div>
+    </div>
+    <div class="xxc-topics-grid">
+      <article class="xxc-topic">
+        <div class="xxc-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c96b4a'/%3E%3Cstop offset='1' stop-color='%23e6b07f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23t1)'/%3E%3Ccircle cx='130' cy='120' r='70' fill='%23fff' opacity='.28'/%3E%3Cpath d='M230 300 Q240 180 320 160 Q380 145 380 230 L380 300 Z' fill='%233a2a1f' opacity='.5'/%3E%3C/svg%3E" alt="专题《身体的叙事》封面，暖橙渐变与人体剪影">
+          <span class="xxc-topic-status">更新中 · 12 组新作</span>
+        </div>
+        <div class="xxc-topic-body">
+          <h3>身体的叙事 · 第二期</h3>
+          <p>以纪录短片讲述普通人与身体相处的方式：跑者、舞者、照护者、康复者。每支作品都配有创作手记。</p>
+        </div>
+      </article>
+      <article class="xxc-topic">
+        <div class="xxc-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23dfe8ea'/%3E%3Cpath d='M0 220 Q120 160 240 200 T400 170 L400 300 L0 300 Z' fill='%234f7c6a' opacity='.55'/%3E%3Ccircle cx='310' cy='80' r='42' fill='%23f3e6cd'/%3E%3Cpath d='M70 80 L130 140 M130 80 L70 140' stroke='%23a44f31' stroke-width='5' opacity='.45'/%3E%3C/svg%3E" alt="专题《体态公开课》封面，冷调蓝灰与训练曲线">
+          <span class="xxc-topic-status">更新中 · 每周三</span>
+        </div>
+        <div class="xxc-topic-body">
+          <h3>体态公开课 · 办公族篇</h3>
+          <p>联合康复师与运动教练推出系列教程，从颈肩到腰背，给久坐人群一套可执行的练习方案与自测清单。</p>
+        </div>
+      </article>
+      <article class="xxc-topic">
+        <div class="xxc-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e9d9e4'/%3E%3Ccircle cx='200' cy='130' r='72' fill='%238f6a8a' opacity='.45'/%3E%3Cpath d='M60 260 Q200 180 340 260' stroke='%2333261f' stroke-width='4' fill='none' opacity='.3'/%3E%3Crect x='250' y='40' width='90' height='60' rx='10' fill='%23d9a441' opacity='.6'/%3E%3C/svg%3E" alt="专题《身体与自我》封面，柔和粉紫与几何构成">
+          <span class="xxc-topic-status">策划中 · 报名开启</span>
+        </div>
+        <div class="xxc-topic-body">
+          <h3>身体与自我 · 对话季</h3>
+          <p>邀请心理咨询师、写作者与普通用户对谈身体形象、亲密关系与自我接纳，现开放观众报名与提问征集。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者 -->
+<section class="xxc-creators xxc-section" id="xxc-creators">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">创作者矩阵</span>
+        <h2 class="xxc-h2">签约与入驻创作者<small>来自影像、运动、心理、手作等不同领域的原创作者</small></h2>
+      </div>
+    </div>
+    <div class="xxc-creator-grid">
+      <article class="xxc-creator-card">
+        <div class="xxc-creator-face" style="background:linear-gradient(135deg,#4f7c6a,#2f4a42)">栖</div>
+        <div class="xxc-creator-name">阿栖的形体笔记</div>
+        <span class="xxc-creator-field">体态 · 现代舞</span>
+        <p class="xxc-creator-bio">前职业舞者，专注体态训练与身体感知，作品以长镜头与慢节奏著称。</p>
+        <div class="xxc-creator-nums"><div><b>128</b>作品</div><div><b>21.4万</b>关注</div></div>
+        <button class="xxc-btn xxc-btn-ghost xxc-btn-sm" data-author="阿栖的形体笔记">查看简介</button>
+      </article>
+      <article class="xxc-creator-card">
+        <div class="xxc-creator-face" style="background:linear-gradient(135deg,#c96b4a,#8f4527)">陶</div>
+        <div class="xxc-creator-name">陶土工坊</div>
+        <span class="xxc-creator-field">手作 · 影像教学</span>
+        <p class="xxc-creator-bio">把手工制作与影像技法结合，擅长用自然光拍出手部与器物肌理。</p>
+        <div class="xxc-creator-nums"><div><b>76</b>作品</div><div><b>9.8万</b>关注</div></div>
+        <button class="xxc-btn xxc-btn-ghost xxc-btn-sm" data-author="陶土工坊">查看简介</button>
+      </article>
+      <article class="xxc-creator-card">
+        <div class="xxc-creator-face" style="background:linear-gradient(135deg,#8f6a8a,#5b4160)">言</div>
+        <div class="xxc-creator-name">言心室</div>
+        <span class="xxc-creator-field">心理 · 访谈</span>
+        <p class="xxc-creator-bio">心理咨询师，做身体形象与亲密关系议题的长访谈，风格克制真诚。</p>
+        <div class="xxc-creator-nums"><div><b>54</b>作品</div><div><b>16.2万</b>关注</div></div>
+        <button class="xxc-btn xxc-btn-ghost xxc-btn-sm" data-author="言心室">查看简介</button>
+      </article>
+      <article class="xxc-creator-card">
+        <div class="xxc-creator-face" style="background:linear-gradient(135deg,#d9a441,#a97a1f)">禾</div>
+        <div class="xxc-creator-name">小禾日记</div>
+        <span class="xxc-creator-field">孕产 · 日常记录</span>
+        <p class="xxc-creator-bio">用无旁白的日常影像记录孕期与育儿，强调真实、平静与陪伴感。</p>
+        <div class="xxc-creator-nums"><div><b>93</b>作品</div><div><b>12.6万</b>关注</div></div>
+        <button class="xxc-btn xxc-btn-ghost xxc-btn-sm" data-author="小禾日记">查看简介</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 用户口碑 -->
+<section class="xxc-voices xxc-section" id="xxc-voices">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">社区口碑</span>
+        <h2 class="xxc-h2">来自用户与合作伙伴的真实反馈<small>每条评价均来自社区公开留言，未经修饰</small></h2>
+      </div>
+    </div>
+    <div class="xxc-voice-grid">
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#4f7c6a">李</span>
+          <div><div class="xxc-voice-name">李女士</div><div class="xxc-voice-role">瑜伽练习者 · 关注两年</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★★</div>
+        <p class="xxc-voice-text">最喜欢体态公开课那几期，康复师讲得很细，跟练之后肩颈确实松了不少。平台整体氛围很稳，不会用夸张的东西吸引眼球。</p>
+      </div>
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#8f6a8a">周</span>
+          <div><div class="xxc-voice-name">周同学</div><div class="xxc-voice-role">高校影像社成员</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★★</div>
+        <p class="xxc-voice-text">创作幕后栏目对我们帮助很大，布光和剪辑思路讲得清楚，投稿之后还有编辑回复修改建议，这在别的社区很少见。</p>
+      </div>
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#c96b4a">陈</span>
+          <div><div class="xxc-voice-name">陈先生</div><div class="xxc-voice-role">运动康复机构 · 合作方</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★☆</div>
+        <p class="xxc-voice-text">合作拍过一期康复科普，从脚本到成片沟通顺畅，企业方的专业性体现在流程上。希望后续能增加更多行业观察类内容。</p>
+      </div>
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#d9a441">禾</span>
+          <div><div class="xxc-voice-name">小禾</div><div class="xxc-voice-role">孕产记录创作者</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★★</div>
+        <p class="xxc-voice-text">选题会上编辑会提醒哪些表达可能引发误解，也会帮我们保护隐私。这种被尊重的感觉，是我愿意一直在西西人体更新的原因。</p>
+      </div>
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#2f4a42">阿</span>
+          <div><div class="xxc-voice-name">阿栖</div><div class="xxc-voice-role">签约创作者</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★★</div>
+        <p class="xxc-voice-text">这里对“人体”的理解是完整的，不只有外形，还有健康、情绪和年龄。这个方向让我可以把舞者的经验真正讲出来。</p>
+      </div>
+      <div class="xxc-voice">
+        <div class="xxc-voice-top">
+          <span class="xxc-avatar" style="background:#6a5648">吴</span>
+          <div><div class="xxc-voice-name">吴老师</div><div class="xxc-voice-role">中学美术教师</div></div>
+        </div>
+        <div class="xxc-voice-dots">★★★★☆</div>
+        <p class="xxc-voice-text">会把纪实类和访谈类作品推荐给高年级学生讨论，页面信息清楚，内容分级和举报入口做得比较规范，作为老师我比较放心。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 创作灵感 -->
+<section class="xxc-ideas xxc-section" id="xxc-ideas">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">创作灵感</span>
+        <h2 class="xxc-h2">给创作者的一份选题与剪辑工具箱<small>来自官方编辑部的经验沉淀，持续补充</small></h2>
+      </div>
+    </div>
+    <div class="xxc-ideas-grid">
+      <div class="xxc-idea-panel">
+        <h3><i>01</i>本期选题灵感</h3>
+        <ul class="xxc-idea-list">
+          <li><b>体态自测</b>用一个固定机位拍下自己的侧面站姿与坐姿，对比一周变化，配一句内心独白即可成片。</li>
+          <li><b>触摸训练</b>记录一次康复按摩或拉伸course，重点拍手部动作与被照护者的表情，强调信任感。</li>
+          <li><b>旧衣与新身</b>找出三件不同时期穿过的衣服，讲述身体与审美的变化，适合竖屏微纪录。</li>
+          <li><b>一分钟呼吸</b>固定肩部特写，记录一分钟呼吸时胸腔与锁骨的变化，适合做系列短片。</li>
+          <li><b>照护者的手</b>拍一次家庭照护中的手部细节：递水、扶背、系扣子，用细节承载情感。</li>
+        </ul>
+      </div>
+      <div class="xxc-idea-panel">
+        <h3><i>02</i>剪辑与标题建议</h3>
+        <p class="xxc-media-desc" style="margin-bottom:14px">节奏上建议先给环境声再进音乐，避免情绪过满；特写镜头之间保留半秒呼吸。标题尽量具体，把“人”和“时间”写进去，例如「肩颈线的三十天」，比「超实用教程」更容易被记住。</p>
+        <div class="xxc-tag-cloud">
+          <button type="button"># 身体叙事</button>
+          <button type="button"># 体态训练</button>
+          <button type="button"># 生命记录</button>
+          <button type="button"># 手作影像</button>
+          <button type="button"># 康复科普</button>
+          <button type="button"># 采访提纲</button>
+          <button type="button"># 自然光</button>
+          <button type="button"># 长镜头</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 -->
+<section class="xxc-news xxc-section" id="xxc-news">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">企业动态</span>
+        <h2 class="xxc-h2">官方发布与内容更新<small>品牌资讯、合作消息与社区活动，在这里统一发布</small></h2>
+      </div>
+    </div>
+    <div class="xxc-news-list">
+      <div class="xxc-news-item">
+        <div class="xxc-news-date">11 / 18</div>
+        <div>
+          <h3>「身体的叙事」第二期正式上线，新增 12 组原创影像</h3>
+          <p>本期覆盖跑者、舞者、照护者三类人群，配套发布创作手记与拍摄清单，可在焦点影像区查看。</p>
+        </div>
+        <span class="xxc-news-badge">官方发布</span>
+      </div>
+      <div class="xxc-news-item">
+        <div class="xxc-news-date">11 / 15</div>
+        <div>
+          <h3>与三家运动康复机构达成内容合作，共建科普栏目</h3>
+          <p>合作聚焦办公族体态与术后康复，所有内容由专业顾问参与审核，保证科普信息准确、表达克制。</p>
+        </div>
+        <span class="xxc-news-badge">企业动态</span>
+      </div>
+      <div class="xxc-news-item">
+        <div class="xxc-news-date">11 / 10</div>
+        <div>
+          <h3>新人扶持计划第四季开启报名，提供拍摄与剪辑支持</h3>
+          <p>面向首次投稿的创作者，入选者可获得器材借用、脚本辅导与成片推广资源，报名入口见联系区。</p>
+        </div>
+        <span class="xxc-news-badge">报名</span>
+      </div>
+      <div class="xxc-news-item">
+        <div class="xxc-news-date">11 / 03</div>
+        <div>
+          <h3>社区准则更新：强化隐私保护与未成年人保护条款</h3>
+          <p>新增影像授权与出镜同意书模板，涉及家庭与照护场景的作品需完成额外审核后发布。</p>
+        </div>
+        <span class="xxc-news-badge">规则</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="xxc-faq xxc-section" id="xxc-faq">
+  <div class="xxc-wrap">
+    <div class="xxc-section-head">
+      <div>
+        <span class="xxc-kicker">帮助中心</span>
+        <h2 class="xxc-h2">常见问题<small>关于内容、投稿、合作与社区规则</small></h2>
+      </div>
+    </div>
+    <div class="xxc-faq-grid">
+      <details>
+        <summary>西西人体的内容范围包括哪些？</summary>
+        <p>主要覆盖人体艺术与影像美学、健康运动与体态、身体心理与访谈、生命故事与日常记录、创作幕后五个方向。所有作品强调真实、专业与尊重，不发布低俗化或侵权内容。</p>
+      </details>
+      <details>
+        <summary>如何成为平台创作者并投稿？</summary>
+        <p>点击导航中的“联系”或页面中的投稿入口，填写基本信息与作品链接。编辑部会在五个工作日内回复，通过后签署内容授权协议即可发布，新人可获得脚本与剪辑建议。</p>
+      </details>
+      <details>
+        <summary>企业合作有哪些形式？</summary>
+        <p>包括品牌片定制、系列栏目共创、专题企划冠名、创作者联合挑战赛等。我们也会提供内容诊断与数据复盘，帮助合作方理解内容表现，具体方案可联系商务邮箱。</p>
+      </details>
+      <details>
+        <summary>作品中的肖像与隐私如何处理？</summary>
+        <p>涉及他人出镜的作品需提供书面同意与授权说明。平台提供同意书模板，涉及家庭、照护、孕产等场景的作品会进行额外审核，必要时做模糊或删减处理。</p>
+      </details>
+      <details>
+        <summary>看到不合适的作品怎么办？</summary>
+        <p>可在作品页面使用举报入口，说明具体问题。运营团队会在 48 小时内核实并反馈处理结果，情节严重的会下架作品并限制账号功能。</p>
+      </details>
+      <details>
+        <summary>平台是否支持内容下载？</summary>
+        <p>创作者可下载自己发布的作品源文件与数据报告。观众端提供收藏与分享功能，如需转载或商业使用，须通过授权流程获得书面许可。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section class="xxc-contact" id="xxc-contact">
+  <div class="xxc-wrap xxc-contact-grid">
+    <div>
+      <h2>联系我们 · 投稿与合作</h2>
+      <p>无论是影像投稿、品牌合作，还是对社区规则的建议，都欢迎与官方网站团队取得联系。我们坚持用户至上，认真对待每一条留言。</p>
+      <div class="xxc-contact-actions">
+        <button class="xxc-btn xxc-btn-primary" id="xxcContactSubmit">在线投稿</button>
+        <button class="xxc-btn xxc-btn-ghost" id="xxcContactShare" style="background:transparent;color:#f8f2e9;border-color:rgba(255,255,255,.4)">分享本站</button>
+      </div>
+    </div>
+    <div class="xxc-contact-card">
+      <div><b>商务合作</b> business@xixirenti.example</div>
+      <div><b>内容投稿</b> submit@xixirenti.example</div>
+      <div><b>社区事务</b> community@xixirenti.example</div>
+      <div><b>工作时间</b> 周一至周五 10:00 – 18:30</div>
+      <div><b>办公地址</b> 西西人体品牌中心 · 影像内容部</div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="xxc-footer">
+  <div class="xxc-wrap">
+    <div class="xxc-footer-grid">
+      <div>
+        <div class="xxc-footer-brand">
+          <span class="xxc-brand-mark">西</span>
+          <span>
+            <span style="color:#fff;font-weight:800;font-size:16px">西西人体</span><br>
+            <span style="letter-spacing:.18em;font-size:10.5px">OFFICIAL SITE</span>
+          </span>
+        </div>
+        <p style="line-height:1.8;max-width:320px">西西人体官方网站，专注人体美学、健康叙事与原创影像的持续运营品牌。以匠心与创新连接创作者、企业与社区，让真实与温暖获得表达。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#xxc-focus">焦点影像</a></li>
+          <li><a href="#xxc-topics">专题企划</a></li>
+          <li><a href="#xxc-ideas">创作灵感</a></li>
+          <li><a href="#xxc-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#xxc-insight">品牌解析</a></li>
+          <li><a href="#xxc-news">企业动态</a></li>
+          <li><a href="#xxc-voices">社区口碑</a></li>
+          <li><a href="#xxc-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#xxc-contact">投稿入口</a></li>
+          <li><a href="#xxc-contact">商务合作</a></li>
+          <li><a href="#xxc-faq">社区准则</a></li>
+          <li><a href="#xxc-contact">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="xxc-footer-bottom">
+      <span>西西人体官方网站 | 版权所有 © 2026 | 持续运营中</span>
+      <span>原创 · 正版 · 高清 · 值得信赖的内容生态</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="xxc-modal-mask" id="xxcModalMask">
+  <div class="xxc-modal" role="dialog" aria-modal="true" aria-labelledby="xxcModalTitle">
+    <button class="xxc-modal-close" id="xxcModalClose" aria-label="关闭">✕</button>
+    <h3 id="xxcModalTitle">提示</h3>
+    <div id="xxcModalBody"></div>
+  </div>
+</div>
+
+<div class="xxc-toast" id="xxcToast"></div>
+<button class="xxc-top-btn" id="xxcTopBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 工具 ---------- */
+  var toast = document.getElementById('xxcToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('xxc-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('xxc-show'); }, 2000);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('xxcBurger');
+  var nav = document.getElementById('xxcNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('xxc-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('xxc-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('xxcSearchInput');
+  var searchBtn = document.getElementById('xxcSearchBtn');
+  var searchFeedback = document.getElementById('xxcSearchFeedback');
+  var searchIndex = [
+    '肩颈线的三十天', '掌纹与陶土', '呼吸与心率', '关于身体形象的一次长谈',
+    '孕中期的一天', '身体的叙事', '体态公开课', '身体与自我',
+    '阿栖的形体笔记', '陶土工坊', '言心室', '小禾日记'
+  ];
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchFeedback.textContent = '请输入关键词，例如「体态」「访谈」或创作者昵称。';
+      searchFeedback.classList.add('xxc-show');
+      return;
+    }
+    var hits = searchIndex.filter(function(item){ return item.indexOf(kw) > -1; });
+    if(hits.length){
+      searchFeedback.textContent = '找到 ' + hits.length + ' 条相关内容：' + hits.join('、') + '。可前往焦点影像或创作者区查看。';
+      showToast('搜索完成，共 ' + hits.length + ' 条结果');
+    }else{
+      searchFeedback.textContent = '暂时没有匹配「' + kw + '」的内容，换个关键词试试，或通过投稿入口告诉我们你想看什么。';
+      showToast('暂无匹配结果');
+    }
+    searchFeedback.classList.add('xxc-show');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ doSearch(); }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  function bindLike(btn){
+    var base = parseInt(btn.getAttribute('data-like'), 10) || 0;
+    var liked = false;
+    var b = btn.querySelector('b');
+    btn.addEventListener('click', function(){
+      liked = !liked;
+      var n = liked ? base + 1 : base;
+      if(b){ b.textContent = n; }
+      btn.classList.toggle('xxc-liked', liked);
+      showToast(liked ? '已记录你的喜欢' : '已取消喜欢');
+    });
+  }
+  function bindSave(btn){
+    var saved = false;
+    btn.addEventListener('click', function(){
+      saved = !saved;
+      btn.classList.toggle('xxc-saved', saved);
+      btn.innerHTML = saved ? '★ 已收藏' : '☆ 收藏';
+      showToast(saved ? '已加入收藏夹' : '已取消收藏');
+    });
+  }
+  document.querySelectorAll('[data-like]').forEach(bindLike);
+  document.querySelectorAll('[data-save]').forEach(bindSave);
+
+  /* ---------- 弹窗 ---------- */
+  var mask = document.getElementById('xxcModalMask');
+  var modalTitle = document.getElementById('xxcModalTitle');
+  var modalBody = document.getElementById('xxcModalBody');
+  var modalClose = document.getElementById('xxcModalClose');
+
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    mask.classList.add('xxc-open');
+  }
+  function closeModal(){ mask.classList.remove('xxc-open'); }
+  modalClose.addEventListener('click', closeModal);
+  mask.addEventListener('click', function(e){ if(e.target === mask){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+
+  /* ---------- 分享 ---------- */
+  var shareHtml =
+    '<p>把西西人体官方网站推荐给同样关注身体叙事与健康美学的朋友。</p>' +
+    '<div class="xxc-share-row">' +
+    '<button type="button" data-copy>复制链接</button>' +
+    '<button type="button" data-channel="微信">微信</button>' +
+    '<button type="button" data-channel="微博">微博</button>' +
+    '<button type="button" data-channel="QQ">QQ</button>' +
+    '</div>' +
+    '<p style="font-size:12px;margin:0">分享内容仅用于交流讨论，转载请注明出处并保留品牌信息。</p>';
+
+  function copyLink(){
+    var url = location.href;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        showToast('页面链接已复制');
+      }).catch(function(){
+        showToast('复制失败，请手动复制地址栏链接');
+      });
+    }else{
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); showToast('页面链接已复制'); }
+      catch(err){ showToast('复制失败，请手动复制地址栏链接'); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    var shareBtn = e.target.closest('[data-share], #xxcContactShare');
+    if(shareBtn){
+      openModal('分享本站', shareHtml);
+      return;
+    }
+    if(e.target.closest('[data-copy]')){
+      copyLink();
+      return;
+    }
+    var ch = e.target.getAttribute('data-channel');
+    if(ch){
+      closeModal();
+      showToast('已生成 ' + ch + ' 分享提示，可前往对应应用粘贴');
+    }
+  });
+
+  /* ---------- 作者简介 ---------- */
+  var authorData = {
+    '阿栖的形体笔记': '前职业现代舞者，现为西西人体签约创作者。专注体态训练与身体感知，主张用慢镜头观察身体细节，代表作《肩颈线的三十天》。',
+    '陶土工坊': '手作工作室与影像教学团队，擅长自然光下的人体局部特写。作品强调手与器物之间的关系，长期更新布光与后期教程。',
+    '言心室': '心理咨询师主理内容账号，围绕身体形象、亲密关系与自我接纳做长访谈。风格克制真诚，重视受访者的表达边界。',
+    '小禾日记': '日常影像创作者，记录孕期、育儿与家庭生活。作品多为无旁白微纪录，强调真实、平静与陪伴感。'
+  };
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      openModal(name, '<p>' + authorData[name] + '</p><button class="xxc-btn xxc-btn-primary xxc-btn-sm" type="button" onclick="document.getElementById(\'xxcModalMask\').classList.remove(\'xxc-open\')">知道了</button>');
+    });
+  });
+
+  /* ---------- 投稿弹窗 ---------- */
+  var submitHtml =
+    '<p>填写基本信息，编辑部会在五个工作日内回复。请确保作品为原创，涉及他人出镜须取得授权。</p>' +
+    '<input type="text" placeholder="你的昵称或团队名称" aria-label="昵称">' +
+    '<input type="text" placeholder="联系方式（邮箱或手机）" aria-label="联系方式">' +
+    '<textarea rows="3" placeholder="简要描述作品主题、时长与拍摄方式" aria-label="作品描述"></textarea>' +
+    '<button class="xxc-btn xxc-btn-primary" type="button" id="xxcSubmitConfirm" style="width:100%;justify-content:center">提交投稿意向</button>';
+
+  function openSubmit(){
+    openModal('在线投稿', submitHtml);
+  }
+  var heroSubmit = document.getElementById('xxcHeroSubmit');
+  if(heroSubmit){ heroSubmit.addEventListener('click', function(e){ e.preventDefault(); openSubmit(); }); }
+  var contactSubmit = document.getElementById('xxcContactSubmit');
+  if(contactSubmit){ contactSubmit.addEventListener('click', openSubmit); }
+
+  document.addEventListener('click', function(e){
+    if(e.target.id === 'xxcSubmitConfirm'){
+      var inputs = modalBody.querySelectorAll('input, textarea');
+      var filled = false;
+      inputs.forEach(function(el){ if(el.value.trim()){ filled = true; } });
+      if(!filled){
+        showToast('请至少填写一项信息');
+        return;
+      }
+      closeModal();
+      showToast('投稿意向已提交，感谢你的信任');
+    }
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('xxcTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('xxc-show'); }
+    else{ topBtn.classList.remove('xxc-show'); }
+  });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll('[data-count]');
+  var counted = false;
+  function animateCounters(){
+    if(counted){ return; }
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var suffix = el.textContent.replace(/[0-9]/g, '').replace(/,/g, '');
+      var start = 0;
+      var dur = 1200;
+      var t0 = null;
+      function step(ts){
+        if(!t0){ t0 = ts; }
+        var p = Math.min((ts - t0) / dur, 1);
+        var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+        el.textContent = val + (suffix.indexOf('万') > -1 ? '万' : '+');
+        if(p < 1){ requestAnimationFrame(step); }
+        else{ el.textContent = target + (suffix.indexOf('万') > -1 ? '万' : '+'); }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ animateCounters(); io.disconnect(); }
+      });
+    }, { threshold: 0.3 });
+    var stats = document.querySelector('.xxc-hero-stats');
+    if(stats){ io.observe(stats); }
+  }else{
+    animateCounters();
+  }
+
+})();
+</script>
+</body>
+                </html>
